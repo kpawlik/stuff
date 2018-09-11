@@ -30,7 +30,7 @@ grep -rnw '/etc/' -e "jdk"
 
 # SERVICES
 
-##service pgsql
+## service pgsql
 ```sh
 vim /etc/init.d/postgresql
 ```
@@ -64,21 +64,21 @@ rsync -a --delete /tmp/empty /myworldtiles_stg/geoserver_data/gwc/Cox_myWorld_co
 # PS TOP
 
 ## Run top for process with NAME
-```
+```sh
 top -c -p $(pgrep -d',' -f NAME)
 ```
 ##How long process is running
-```
+```sh
 ps -p "PID" -o etime=
 ```
 ## top mem/cpu processes
-```
+```sh
 ps aux | sort -k 4 -r | head -20
 ps aux | sort -k 3 -r | head -20
 ```
 
 ## kill all processes for queries  
-```
+```sh
 psql -c "select pid FROM  pg_stat_activity where query like '%user%';" | cat|  awk '{print $1}' | xargs --no-run-if-empty kill $1
 ```
 
@@ -104,16 +104,16 @@ mailx -a file.txt -s "File" Krzysztof.Pawlik@ubisense.net < /dev/null
 # INSTALL FROM GITHUB
 
 install gofind
-```
+```sh
 wget https://github.com/kpawlik/gofind/blob/master/cmd/gofind/gofind?raw=true; mv ./gofind?raw=true ./gofind; chmod u=+rwx ./gofind
 ```
 install monitor
-```
+```sh
 cd /opt/myworld/myworld/WebApps/myworldapp/modules/custom/scripts/interfaces/mosaic/
 wget https://github.com/kpawlik/monitor_process_out/blob/master/monitor_process_out?raw=true; mv ./monitor_process_out?raw=true ./monitor_process_out; chmod u=+rwx ./monitor_process_out
 ```
 geocoding
-```
+```sh
 wget https://github.com/kpawlik/tools/blob/kpawlik-geo-1/geocoding?raw=true; mv ./geocoding?raw=true ./geocoding; chmod u=+rwx ./geocoding
 ```
 drive
