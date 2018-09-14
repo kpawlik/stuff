@@ -93,13 +93,13 @@ psql -c "select pid FROM  pg_stat_activity where query like '%user%';" | cat|  a
 # FIX anywehwere (goto HOME)
 
 ## mobile app go to homepage
-```
+```javascript
 window.location.href= "file:///C:/Users/kpawlik/AppData/Local/Ubisense/myWorld/4.4/public/nativeHome.html"
 ```
 # FIND
 ## quite find error
 
-```
+```sh
 RES=`find /myworldtiles_qa/sqlite/incrementals/13-09-2018__01/* 2> null -maxdepth 0 -type d -exec basename {} \; | sort`
 if [ "${RES}" == "" ]; then echo "NOT FOUND";else echo "FOUND";  fi
 
@@ -107,7 +107,7 @@ if [ "${RES}" == "" ]; then echo "NOT FOUND";else echo "FOUND";  fi
 
 # MAILX
 
-```
+```sh
 mailx -a file.txt -s "File" Krzysztof.Pawlik@ubisense.net < /dev/null
 ```
 
@@ -127,6 +127,6 @@ geocoding
 wget https://github.com/kpawlik/tools/blob/kpawlik-geo-1/geocoding?raw=true; mv ./geocoding?raw=true ./geocoding; chmod u=+rwx ./geocoding
 ```
 drive
-```
+```sh
 wget https://github.com/kpawlik/tools/blob/kpawlik-geo-1/drive?raw=true; mv ./drive?raw=true ./drive; chmod u=+rwx ./drive
 ```
