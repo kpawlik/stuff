@@ -12,7 +12,9 @@
   * [kill all processes for queries](#kill-all-processes-for-queries)               
 * [FILE STORE SERVER (/myworldtiles\_dev)](#file-store-server-myworldtiles_dev)     
 * [FIX anywehwere (goto HOME)](#fix-anywehwere-goto-home)                           
-  * [mobile app go to homepage](#mobile-app-go-to-homepage)                         
+  * [mobile app go to homepage](#mobile-app-go-to-homepage)            
+* [FIND](#find)
+  * [quite find error](#quite-find-error)
 * [MAILX](#mailx)                                                                   
 * [INSTALL FROM GITHUB](#install-from-github)                                       
 
