@@ -94,6 +94,14 @@ psql -c "select pid FROM  pg_stat_activity where query like '%user%';" | cat|  a
 ```
 window.location.href= "file:///C:/Users/kpawlik/AppData/Local/Ubisense/myWorld/4.4/public/nativeHome.html"
 ```
+# FIND
+## quite find error
+
+```
+RES=`find /myworldtiles_qa/sqlite/incrementals/13-09-2018__01/* 2> null -maxdepth 0 -type d -exec basename {} \; | sort`
+if [ "${RES}" == "" ]; then echo "NOT FOUND";else echo "FOUND";  fi
+
+```
 
 # MAILX
 
