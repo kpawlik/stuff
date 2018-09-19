@@ -130,3 +130,7 @@ drive
 ```sh
 wget https://github.com/kpawlik/tools/blob/kpawlik-geo-1/drive?raw=true; mv ./drive?raw=true ./drive; chmod u=+rwx ./drive
 ```
+gorep
+```sh
+wget https://github.com/kpawlik/gotools/blob/master/gorep/gorep?raw=true; mv ./gorep?raw=true ./gorep; chmod u=+rwx ./gorep
+```
