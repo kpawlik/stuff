@@ -13,7 +13,7 @@
 * [SESSION](#session)                                                   
   * [save](#save)                                                       
   * [load](#load)               
-* [CRONTAB](#corntab)
+* [CRONTAB](#crontab)
 
 ```sh
 sshpass -p'A!!min3' scp -r ~/.vim  catl0dlas10012:~/
