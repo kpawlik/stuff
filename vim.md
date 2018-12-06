@@ -12,7 +12,8 @@
 * [Show whitespace](#show-whitespace)                                   
 * [SESSION](#session)                                                   
   * [save](#save)                                                       
-  * [load](#load)                                                       
+  * [load](#load)               
+* [CRONTAB] (#corntab)
 
 ```sh
 sshpass -p'A!!min3' scp -r ~/.vim  catl0dlas10012:~/
@@ -100,4 +101,14 @@ Ctrl+w Ctrl+w
 ## load 
 ```
 :source ~/path
+```
+# CRONTAB
+```
+edit:
+~/.bash_profile
+
+and set:
+
+EDITOR=/usr/bin/vim
+export EDITOR
 ```
