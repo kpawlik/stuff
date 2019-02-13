@@ -14,6 +14,7 @@
   * [save](#save)                                                       
   * [load](#load)               
 * [CRONTAB](#crontab)
+* [PASTE](#paste)
 
 ```sh
 sshpass -p'A!!min3' scp -r ~/.vim  catl0dlas10012:~/
@@ -112,3 +113,10 @@ and set:
 EDITOR=/usr/bin/vim
 export EDITOR
 ```
+
+# PASTE
+## turn off auto intend
+```
+:set paste
+```
+
