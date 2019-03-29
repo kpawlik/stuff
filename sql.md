@@ -15,7 +15,8 @@ FROM (
     'geometry',   ST_AsGeoJSON(the_geom)::jsonb,
     'properties', to_jsonb(inputs) - 'id' - 'name'
   ) AS feature
-  FROM (SELECT id,name,the_geom FROM data.amplifier where the_geom is not null limit 10) inputs) features) TO /tmp/test.json;
+  FROM (SELECT id,name,the_geom FROM data.amplifier 
+  WHERE the_geom IS NOT NULL LIMIT 10) inputs) features) TO /tmp/test.json;
 "
 ```
 
