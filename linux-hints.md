@@ -1,22 +1,24 @@
-* [LOG OUTPUT](#log-output)                                                         
-* [SERVICES](#services)                                                             
-* [TAR](#tar)                                                                       
-  * [untar](#untar)                                                                 
-  * [tar gzip](#tar-gzip)                                                           
-* [SYM LINK](#sym-link)                                                             
-* [SSHPASS](#sshpass)                                                               
-  * [Fast empty dir](#fast-empty-dir)                                               
-* [PS TOP](#ps-top)                                                                 
-  * [Run top for process with NAME](#run-top-for-process-with-name)                 
-  * [top mem/cpu processes](#top-memcpu-processes)                                  
-  * [kill all processes for queries](#kill-all-processes-for-queries)               
-* [FILE STORE SERVER (/myworldtiles\_dev)](#file-store-server-myworldtiles_dev)     
-* [FIX anywehwere (goto HOME)](#fix-anywehwere-goto-home)                           
-  * [mobile app go to homepage](#mobile-app-go-to-homepage)            
-* [FIND](#find)
-  * [quite find error](#quite-find-error)
-* [MAILX](#mailx)                                                                   
-* [INSTALL FROM GITHUB](#install-from-github)                                       
+- [LOG OUTPUT](#log-output)
+- [SERVICES](#services)
+  - [service pgsql](#service-pgsql)
+- [TAR](#tar)
+  - [untar](#untar)
+  - [tar gzip](#tar-gzip)
+- [SYM LINK](#sym-link)
+- [SSHPASS](#sshpass)
+  - [Fast empty dir](#fast-empty-dir)
+  - [Execute remote command](#execute-remote-command)
+- [PS TOP](#ps-top)
+  - [Run top for process with NAME](#run-top-for-process-with-name)
+  - [top mem/cpu processes](#top-memcpu-processes)
+  - [kill all processes for queries](#kill-all-processes-for-queries)
+- [FILE STORE SERVER (/myworldtiles_dev)](#file-store-server-myworldtilesdev)
+- [FIX anywehwere (goto HOME)](#fix-anywehwere-goto-home)
+  - [mobile app go to homepage](#mobile-app-go-to-homepage)
+- [FIND](#find)
+  - [quite find error](#quite-find-error)
+- [MAILX](#mailx)
+- [INSTALL FROM GITHUB](#install-from-github)
 
 
 ```sh
@@ -55,14 +57,17 @@ ln -s source_file target_link
 
 # SSHPASS
 ```sh
-sshpass -p'A!!min3' scp -r /path_to_local_file  dukegndv99:/path_to_remote_file
+sshpass -p'PSWD' scp -r /path_to_local_file  HOST:/path_to_remote_file
 ```
 ## Fast empty dir
 ```sh
 mkdir /tmp/empty
 rsync -a --delete /tmp/empty /myworldtiles_stg/geoserver_data/gwc/Cox_myWorld_cox_legacy_grid/
 ```
-
+## Execute remote command
+```sh
+sshpass -p'PSWD' ssh -t user@HOST 'sudo service httpd restart'
+```
 # PS TOP
 
 ## Run top for process with NAME
