@@ -19,6 +19,7 @@
   - [quite find error](#quite-find-error)
 - [MAILX](#mailx)
 - [INSTALL FROM GITHUB](#install-from-github)
+- [TILES CALC TILE COORD](#tiles-calc-tile-coord)
 
 
 ```sh
@@ -138,4 +139,16 @@ wget https://github.com/kpawlik/tools/blob/kpawlik-geo-1/drive?raw=true; mv ./dr
 gorep
 ```sh
 wget https://github.com/kpawlik/gotools/blob/master/gorep/gorep?raw=true; mv ./gorep?raw=true ./gorep; chmod u=+rwx ./gorep
+```
+
+# TILES CALC TILE COORD
+
+```
+# URL http://localhost:8080/tiles/tile/geo/geotiles/22/2084196/1380023.png?384478
+
+SELECT zoom_level, length(tile_data),tile_column, tile_row, CAST((ABS(pow(2, zoom_level) - 1 - tile_row)) as INTEGER)
+ FROM "tiles" where zoom_level = 22 and tile_column =  2084196
+--and CAST((ABS(pow(2, zoom_level) - 1 - tile_row)) as INTEGER) = 1380023
+order by tile_row asc
+
 ```
