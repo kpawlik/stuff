@@ -1,3 +1,4 @@
+[TOC]
 - [LOG OUTPUT](#log-output)
 - [SERVICES](#services)
   - [service pgsql](#service-pgsql)
@@ -110,6 +111,11 @@ RES=`find /myworldtiles_qa/sqlite/incrementals/13-09-2018__01/* 2> null -maxdept
 if [ "${RES}" == "" ]; then echo "NOT FOUND";else echo "FOUND";  fi
 
 ```
+## Find file with name and grep
+```sh
+for file in `find /myworldtiles_prod/sqlite/incrementals/24-02-2020__00/ -maxdepth 4 -name *log -size +0c ` ; do echo $file; cat $file | grep "ERROR\|Error\|error"; done
+```
+
 
 # MAILX
 
